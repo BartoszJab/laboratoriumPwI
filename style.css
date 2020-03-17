@@ -1,0 +1,78 @@
+html,body {
+    margin: 0;
+}
+
+#header-id {
+    background-color: #e04d49;
+}
+/*  .aside to inaczej *.aside, jezeli zrobimy article.aside {}
+to podane parametry przyjma sie dla klasy tylko i wylaczanie w article*/
+.aside-class {
+    background-color: #2e4b96;
+}
+
+footer {
+    background-color: #532960;
+}
+
+.article-class {
+  background-color: #b8c834;
+}
+
+.article-class section {
+  background-color: #6b6c1e;
+  height: 70%;
+  margin: 0 20px;
+}
+
+nav {
+    background-color: green;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul, nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: orange;
+}
+
+nav li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+a {
+    width: 100%;
+    display: inline-block;
+    background-color: #eb5ec3;
+}
+
+a:hover {
+    background-color: #5e3f5e;
+}
+
+main {
+  display: flex;
+  height: 100px;
+}
+
+main > .article-class {
+  flex: 2;
+}
+
+main > .aside-class {
+  flex: 1;
+}
