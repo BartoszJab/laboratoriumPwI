@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>js01</title>
+
+    <script type="text/javascript">
+
+
+      function calculate(){
+        var num1 = document.getElementById("number1").value;
+        var num2 = document.getElementById("number2").value;
+
+        var add = +num1 + +num2;
+        var sub = num1 - num2;
+        var multi = num1 * num2;
+
+        if(num2 === 0){
+          var divide = "infinity";
+        }
+        else{
+          var divide = num1 / num2;
+        }
+
+        document.getElementById("addition").innerHTML = "Dodawanie " +  add;
+        document.getElementById("subtraction").innerHTML = "Odejmowanie: " + sub;
+        document.getElementById("multiplication").innerHTML = "Mnozenie: " + multi;
+        document.getElementById("division").innerHTML = "Dzielenie: " + divide;
+      }
+
+    </script>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <input id="number1" type="number" name="number1">
+      <input id="number2" type="number" name="number2">
+      <button id="submit" type="button" name="submit" onclick="calculate();">Submit</button>
+      
+      <output id="addition" name="addition"></output>
+      <output id="subtraction" name="subtraction"></output>
+      <output id="multiplication" name="multiplication"></output>
+      <output id="division" name="division"></output>
+    </form>
+
+  </body>
+</html>

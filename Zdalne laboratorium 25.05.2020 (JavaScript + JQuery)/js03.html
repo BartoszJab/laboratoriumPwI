@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>js03</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+    <form action="index.html" method="post">
+      <input id="number1" type="number" name="number1">
+      <input id="number2" type="number" name="number2">
+      <button id="submit" type="button" name="submit">Submit</button>
+
+      <output id="addition" name="addition"></output>
+      <output id="subtraction" name="subtraction"></output>
+      <output id="multiplication" name="multiplication"></output>
+      <output id="division" name="division"></output>
+
+      <script>
+        $("#submit").click(function(){
+          var num1 = $("#number1").val();
+          var num2 = $("#number2").val();
+
+          $("#addition").text("Dodawanie: " + (+num1 + +num2));
+          $("#subtraction").text("Odejmowanie: " + (num1 - num2));
+          $("#multiplication").text("Mnozenie: " + (num1 * num2));
+          if(num2===0){
+            $("#division").text("Infinity");
+          }
+          else{
+            $("#division").text("Dzielenie: " + (num1 / num2));
+          }
+
+        });
+      </script>
+    </form>
+  </body>
+</html>
